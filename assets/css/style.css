@@ -3,13 +3,43 @@ body {
 }
 
 .bandeau {
-    position: absolute;
     background-color: grey;
-    width: 1520px;
+    width: 100%;
     height: 200px;;
 }
 
-#logo {
+#logo img {
     width: 80px;
     height: 80px;
+}
+
+/* cadre de bienvenue */
+
+#bienvenue{
+    padding: 20px;
+}
+
+/* Footer */
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer a{
+    color: white;
+    text-decoration: none;
+    cursor:alias;
+}
+
+#copy{
+    text-align: center;
+    font-weight: bold;
+}
+
+footer{
+    background-color: gray;
+    padding: 10px;
+    color: white;
+    font-size: x-large;
 }
