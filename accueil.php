@@ -1,2 +1,4 @@
-<?php 
+<?php
+include 'header.php';
 echo 'Hello World !';
+?>

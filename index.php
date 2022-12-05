@@ -12,7 +12,7 @@ if(!isset($_GET['ressource'])){
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
-$dbname = 'forum_users';
+$dbname = 'forum_dev';
 $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 $connection->set_charset('utf8');
 
