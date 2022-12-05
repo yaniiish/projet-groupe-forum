@@ -34,6 +34,10 @@
         </div>
     </section>
 
+    <section id="messages">
+        <h1>Derniers Messages</h1>
+    </section>
+
 
     
     <?php
