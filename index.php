@@ -1,5 +1,5 @@
 <?php
-
+gf
 //http://localhost/monsite/index.php?ressource=utilisateur&action=show
 
 if(!isset($_GET['ressource'])){
