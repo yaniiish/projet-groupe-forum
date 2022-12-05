@@ -12,11 +12,10 @@
 <body>
 
 <div class="bandeau">
-    <div id="logo">
-        <img src="./assets/images/logo_forum_vectoriel.png" alt="logo">
+<div id="logo">
+<img src="./assets/images/logo_forum_vectoriel.png" alt="logo">
     </div>
     <div class="nom_forum">
-        <h1>Le forum des dev'</h1>
     </div>
     
 
