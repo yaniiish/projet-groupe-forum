@@ -13,7 +13,7 @@
 
 <div class="bandeau">
     <div id="logo">
-        <img src="./assets/images/logo_forum.png" alt="logo">
+       <a href="accueil.php"><img src="./assets/images/logo_forum.png" alt="logo"></a>
     </div>
     <div class="nom_forum">
         <p>LE FORUM DES DEV'</p>
@@ -32,7 +32,7 @@
         <li><a href="javascript.php" style="color: white">JAVASCRIPT</a></li>
         <li><a href="php.php" style="color: white">PHP</a></li>
         <li><a href="frameworks.php" style="color: white">FRAMEWORKS</a></li>
-        <li>&#128269; RECHERCHE</li>
+        <li style="border: none">&#128269;<input type="text" name="search" placeholder="RECHERCHE">&#160;<input type="submit" value="OK"></li>
     </ul>
 </div>
     

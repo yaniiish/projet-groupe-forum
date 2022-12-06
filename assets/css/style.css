@@ -52,6 +52,7 @@ ul {
 
 li {
     border: 2px solid white;
+    background-color: rgb(156, 152, 152);
     color: white;
     border-radius: 5px;
     padding: 5px 3px;
@@ -95,9 +96,22 @@ footer{
 
 #copy{
     text-align: center;
-    /*font-weight: bold;*/
 }
 
 #names {
     font-size: 15px;
+}
+
+/* Nouveau sujet */
+.new {
+    background-color:rgb(212, 207, 207);
+    border: 2px solid black;
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    padding: 2%;
+}
+
+.new p{
+    text-align: center;
 }
