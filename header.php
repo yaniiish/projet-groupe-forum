@@ -25,6 +25,16 @@
         <a href="deco.php" class="btn">Déconnexion</a>
     </div>
 </div>
+
+<div class="sections">
+    <ul>
+        <li>HTML/CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>PHP</li>
+        <li>FRAMEWORKS</li>
+        <li>&#128269; RECHERCHE</li>
+    </ul>
+</div>
     
 </body>
 
