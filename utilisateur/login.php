@@ -1,28 +1,23 @@
 <?php
     include("../connexion.php");
 
-    @$nom = $_POST["nom"];
-    @$prenom = $_POST["prenom"];
-    @$pseudo = $_POST["pseudo"];
-    @$password = $_POST["password"];
-    @$passwordConf = $_POST["passconf"];
-    @$pass_crypt = md5($_POST["password"]);
+    $pseudo = $_POST["pseudo"];
+    $password = $_POST["password"];
 
     session_start();
-    @$valider = $_POST["valider"];
+    $valider = $_POST["valider"];
     $erreur = "";
-    if (isset($valider)) {
-    
-    $verify = $pdo->prepare("select * from utilisateurs where pseudo=? and password=? limit 1");
-    $verify->execute(array($pseudo, $pass_crypt));
-    $user = $verify->fetchAll();
-    if (count($user) > 0) {
-    $_SESSION["prenom_nom"] = ucfirst(strtolower($user[0]["prenom"])) .
-    " "  .  strtoupper($user[0]["nom"]);
-    $_SESSION["connecter"] = "yes";
-    header("location:session.php");
+    if (isset($valider) && isset($pseudo) && isset($password)) {
+        $verify = $pdo->prepare("select * from utilisateurs where pseudo=? and password=?");
+        $verify->execute(array($pseudo, $password));
+        $user = $verify->fetchAll();
+        if (count($user) > 0) {
+        $_SESSION["pseudo"] = ucfirst(strtolower($user[0]["pseudo"])) .
+        " "  .  strtoupper($user[0]["nom"]);
+        $_SESSION["connecter"] = "yes";
+        header("location:../accueil.php");
     } else
-    $erreur = "Mauvais login ou mot de passe!";
+        $erreur = "Mauvais login ou mot de passe!";
 }
 ?>
 
