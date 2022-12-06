@@ -36,7 +36,7 @@
 ul {
     display: flex;
     padding: 10px;
-    list-style-type: nogit mne;
+    list-style-type: none;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(110, 104, 104);
