@@ -13,4 +13,5 @@ function pdo_connect() {
     }
 }
 
+$pdo = pdo_connect();
 ?>

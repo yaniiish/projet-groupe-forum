@@ -1,23 +1,25 @@
 <?php
     include("../connexion_bdd.php");
-    $pdo = pdo_connect();
-   
     
-    if (isset($_POST["valider"]) && isset($_POST["password"]) && isset($_POST["pseudo"])) {
+    if (isset($_POST['valider']) && isset($_POST['pseudo']) && isset($_POST['password'])) {
         $pseudo = $_POST["pseudo"];
         $password = $_POST["password"];
-        $valider = $_POST["valider"];
-        // $verifhash = password_verify(($_POST["password"]),$hash);
-        $verify = $pdo->prepare("select * from utilisateurs where pseudo=? and mdp=?");
-        $verify->execute(array($pseudo, $password));
-        $user = $verify->fetchAll();
-        if (count($user) > 0) {
-            $_SESSION["pseudo"] = ucfirst(strtolower($user[0]["pseudo"]));
-            header("location:../accueil.php");
-        } else
-            $erreur = "Mauvais login ou mot de passe!";
-}
 
+        if (isset($pseudo) && isset($password)) {
+            $requser=$pdo->prepare("SELECT*FROM utilisateurs WHERE pseudo=?");
+            $requser->execute([$pseudo]);
+
+            $userexist=$requser->fetch(PDO::FETCH_OBJ);
+
+            if($userexist && password_verify($password, $userexist->mdp)) {
+                $userinfo=$requser->fetch();
+                $_SESSION['id']=$userinfo['pseudo'];
+                header("location:../accueil.php");
+            } else{
+                echo "Mauvais login ou mot de passe!";
+            }  
+        }
+    }
 ?>
 
 

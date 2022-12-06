@@ -37,10 +37,10 @@
 <?php
 session_start();
 require_once("../connexion_bdd.php");
-$pdo= pdo_connect();
+
 
 if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["confirm_password"]) && $_POST["password"] === $_POST["confirm_password"] && isset($_POST["check_inscription"]) ) {
-    $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $hash = password_hash($_POST["password"], PASSWORD_BCRYPT);
     $request = $pdo->prepare("INSERT INTO utilisateurs (pseudo, mail, mdp) VALUES (:pseudo, :mail, :mdp)"); 
     $request->execute([
         "pseudo" => $_POST["pseudo"],
