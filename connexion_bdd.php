@@ -13,11 +13,4 @@ function pdo_connect() {
     }
 }
 
-// $serveur  = "localhost";
-// $database = "forum_dev"; //exo_diag_php_bdd
-// $user     = "root";
-// $password = "";
-
-// $conn = new PDO('mysql:host='.$serveur.';dbname='.$database.'', $user, $password);
-
 ?>

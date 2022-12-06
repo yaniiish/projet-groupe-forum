@@ -1,22 +1,3 @@
-<?php
-session_start();
-require_once("../connexion_bdd.php");
-$pdo= pdo_connect();
-
-if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["confirm_password"]) && $_POST["password"] === $_POST["confirm_password"] && isset($_POST["check_inscription"]) ) {
-    $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    $request = $pdo->prepare("INSERT INTO utilisateurs VALUES(NULL, :pseudo, :mail, :password)"); 
-    $request->execute([
-        "pseudo" => $_POST["pseudo"],
-        "password" => $hash,
-        "mail" => $_POST["mail"],
-    ]);     
-    header('Location:login.php');
-} 
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,7 +7,7 @@ if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) &
     <title>Inscription</title>
 </head>
 <body>
-    <form method="POST" action="login.php">
+    <form method="POST" action="inscription.php">
         <div>
             <span class="pseudo">Pseudo</span>
             <input type="text" placeholder="Votre pseudo" name="pseudo">
@@ -52,3 +33,20 @@ if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) &
     </form>
 </body>
 </html>
+
+<?php
+session_start();
+require_once("../connexion_bdd.php");
+$pdo= pdo_connect();
+
+if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["confirm_password"]) && $_POST["password"] === $_POST["confirm_password"] && isset($_POST["check_inscription"]) ) {
+    $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $request = $pdo->prepare("INSERT INTO utilisateurs (pseudo, mail, mdp) VALUES (:pseudo, :mail, :mdp)"); 
+    $request->execute([
+        "pseudo" => $_POST["pseudo"],
+        "mail" => $_POST["mail"],
+        "mdp" => $hash,
+    ]);     
+    header('Location:login.php');
+} 
+?>
