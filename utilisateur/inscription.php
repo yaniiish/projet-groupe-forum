@@ -5,14 +5,14 @@ $pdo= pdo_connect();
 
 if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["confirm_password"]) && $_POST["password"] === $_POST["confirm_password"] && isset($_POST["check_inscription"]) ) {
     $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    $request = $pdo->prepare("INSERT INTO utilisateurs VALUE (NULL, :pseudo, :mail, :password)"); 
+    $request = $pdo->prepare("INSERT INTO utilisateurs VALUES(NULL, :pseudo, :mail, :password)"); 
     $request->execute([
-        "pseudo" => $_POST['pseudo'],
+        "pseudo" => $_POST["pseudo"],
         "password" => $hash,
-        "mail" => $_POST['mail'],
+        "mail" => $_POST["mail"],
     ]);     
     header('Location:login.php');
-}
+} 
 
 ?>
 
@@ -26,7 +26,7 @@ if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) &
     <title>Inscription</title>
 </head>
 <body>
-    <form method="POST" action="inscription.php">
+    <form method="POST" action="login.php">
         <div>
             <span class="pseudo">Pseudo</span>
             <input type="text" placeholder="Votre pseudo" name="pseudo">
@@ -41,7 +41,7 @@ if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) &
         </div>
         <div>
             <span class="confirm_password">Confirmation mot de passe</span>
-            <input type="password" placeholder="Confirmez votre mot de passe" name="password">
+            <input type="password" placeholder="Confirmez votre mot de passe" name="confirm_password">
         </div>
         <div>
             <input type="checkbox" name="check_inscription">Je suis d'accord avec les conditions générales d'utilisation et politique de confidentialité.
