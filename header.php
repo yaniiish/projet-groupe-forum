@@ -12,13 +12,28 @@
 <body>
 
 <div class="bandeau">
-<div id="logo">
-<img src="./assets/images/logo_forum_vectoriel.png" alt="logo">
+    <div id="logo">
+        <img src="./assets/images/logo_forum.png" alt="logo">
     </div>
     <div class="nom_forum">
+        <p>LE FORUM DES DEV'</p>
     </div>
-    
 
+    <div class="boutons">
+        <a href="#" class="btn">Inscription</a>
+        <a href="connexion.php" class="btn">Connexion</a>
+        <a href="deco.php" class="btn">Déconnexion</a>
+    </div>
+</div>
+
+<div class="sections">
+    <ul>
+        <li>HTML/CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>PHP</li>
+        <li>FRAMEWORKS</li>
+        <li>&#128269; RECHERCHE</li>
+    </ul>
 </div>
     
 </body>
