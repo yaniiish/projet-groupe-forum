@@ -12,12 +12,12 @@
 <body>
     <footer>
         <div id="footer">
-            <a href="#">Nous contacter</a>
+            <a href="#">Plan du site</a>
             <a  href="#">Informations légales</a>
         </div>
         <div id="copy">
-            <p>&copy;copyright </p>
-            <p>Yanis Herda, Samantha Teixeira, Baya Sebia, Armelle Thimothé </p>
+            <p>&copy; COPYRIGHT</p>
+            <p id="names"><i>Yanis Herda, Samantha Teixeira, Baya Sebia, Armelle Thimothé</i></p>
         </div>
     </footer>
 </body>
