@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pseudo` varchar(256) DEFAULT NULL,
   `mail` varchar(256) DEFAULT NULL,
-  `password` varchar(32) DEFAULT NULL,
+  `password` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
