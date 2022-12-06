@@ -1,20 +1,21 @@
 <?php
-    include("../connexion.php");
-    $pseudo = $_POST["pseudo"];
-    $password = $_POST["password"];
-    $valider = $_POST["valider"];
-    $erreur = "";
-    if (isset($valider) && isset($pseudo) && isset($password)) {
-        $verify = $pdo->prepare("select * from utilisateurs where pseudo=? and password=?");
+    include("../connexion_bdd.php");
+    $pdo = pdo_connect();
+   
+    
+    if (isset($_POST["valider"]) && isset($_POST["password"]) && isset($_POST["pseudo"])) {
+        $pseudo = $_POST["pseudo"];
+        $password = $_POST["password"];
+        $valider = $_POST["valider"];
+        // $verifhash = password_verify(($_POST["password"]),$hash);
+        $verify = $pdo->prepare("select * from utilisateurs where pseudo=? and mdp=?");
         $verify->execute(array($pseudo, $password));
         $user = $verify->fetchAll();
         if (count($user) > 0) {
-        $_SESSION["pseudo"] = ucfirst(strtolower($user[0]["pseudo"])) .
-        " "  .  strtoupper($user[0]["nom"]);
-        $_SESSION["connecter"] = "yes";
-        header("location:../accueil.php");
-    } else
-        $erreur = "Mauvais login ou mot de passe!";
+            $_SESSION["pseudo"] = ucfirst(strtolower($user[0]["pseudo"]));
+            header("location:../accueil.php");
+        } else
+            $erreur = "Mauvais login ou mot de passe!";
 }
 
 ?>
@@ -32,13 +33,11 @@
 </head>
 <body>
 
-    <div id="accueil">
+    <!-- <div id="accueil">
         <?php include '../accueil.php'; ?>
-    </div> 
+    </div>  -->
 
     <h1>Se connecter</h1>
-
-    <div  class="erreur"><?php  echo  $erreur  ?></div>
 <form  name="form"  method="post"  action="">
 <input  type="text"  name="pseudo"  placeholder="Votre Pseudo"  /><br  />
 <input  type="password"  name="password"  placeholder="Mot de passe"  /><br  />
