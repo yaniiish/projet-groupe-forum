@@ -1,10 +1,7 @@
 <?php
     include("../connexion.php");
-
     $pseudo = $_POST["pseudo"];
     $password = $_POST["password"];
-
-    session_start();
     $valider = $_POST["valider"];
     $erreur = "";
     if (isset($valider) && isset($pseudo) && isset($password)) {
@@ -19,6 +16,7 @@
     } else
         $erreur = "Mauvais login ou mot de passe!";
 }
+
 ?>
 
 
@@ -29,8 +27,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Se connecter</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
+
+    <div id="accueil">
+        <?php include '../accueil.php'; ?>
+    </div> 
 
     <h1>Se connecter</h1>
 
