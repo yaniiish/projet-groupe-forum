@@ -36,6 +36,10 @@ body{
     text-decoration: none;
 }
 
+a {
+    text-decoration-line: none;
+}
+
 ul {
     display: flex;
     padding: 10px;

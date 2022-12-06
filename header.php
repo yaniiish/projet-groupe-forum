@@ -20,18 +20,18 @@
     </div>
 
     <div class="boutons">
-        <a href="#" class="btn">Inscription</a>
+        <a href="create.php" class="btn">Inscription</a>
         <a href="connexion.php" class="btn">Connexion</a>
-        <a href="deco.php" class="btn">Déconnexion</a>
+        <a href="destroy.php" class="btn">Déconnexion</a>
     </div>
 </div>
 
 <div class="sections">
     <ul>
-        <li>HTML/CSS</li>
-        <li>JAVASCRIPT</li>
-        <li>PHP</li>
-        <li>FRAMEWORKS</li>
+        <li><a href="html_css.php" style="color: white">HTML/CSS</a></li>
+        <li><a href="javascript.php" style="color: white">JAVASCRIPT</a></li>
+        <li><a href="php.php" style="color: white">PHP</a></li>
+        <li><a href="frameworks.php" style="color: white">FRAMEWORKS</a></li>
         <li>&#128269; RECHERCHE</li>
     </ul>
 </div>
