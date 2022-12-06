@@ -17,7 +17,7 @@
         </div>
         <div id="copy">
             <p>&copy;copyright </p>
-            <p>Yanis Herda, Samantha Teixeira, Baya Sebia, Armelle Thimothe </p>
+            <p>Yanis Herda, Samantha Teixeira, Baya Sebia, Armelle Thimothé </p>
         </div>
     </footer>
 </body>
