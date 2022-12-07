@@ -1,5 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter</title>
+    <link rel="stylesheet" href="../assets/css/formulaire.css">
+</head>
+<body>
+
+ 
+<?php include '../composant/header.php'; ?>
+
+<div class="formulaire">
+    <h1>Se connecter</h1>
+        <form name="form" method="POST" action="login.php">
+            <div>
+                <input type="text"  class="input-text" placeholder="Votre pseudo" name="pseudo">
+            </div>
+            <div>
+                <input type="password" class="input-text" placeholder="Votre mot de passe" name="password">
+            </div>
+
 <?php
-    include("../bdd/connexion_bdd.php");
+    require_once("../bdd/connexion_bdd.php");
     
     if (isset($_POST['valider']) && isset($_POST['pseudo']) && isset($_POST['password'])) {
         $pseudo = $_POST["pseudo"];
@@ -11,38 +35,18 @@
             if($userexist && password_verify($password, $userexist->mdp)) {
                 $userinfo=$requser->fetch();
                 $_SESSION['id']=$userinfo['pseudo'];
-                header("location:../index.php");
+                header("location:index.php");
             } else{
-                echo "Mauvais login ou mot de passe!";
+                echo "<p style='color:red'>Mauvais login ou mot de passe!</p>";
         }  
     }
     
 ?>
 
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Se connecter</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
-</head>
-<body>
-
- 
-<?php include '../composant/header.php'; ?>
-
-<div class="formulaire">
-    <h1>Se connecter</h1>
-    <form  name="form"  method="post"  action="">
-        <input  type="text"  name="pseudo"  placeholder="Votre Pseudo"  /><br  />
-        <input  type="password"  name="password"  placeholder="Mot de passe"  /><br  />
-        <input  type="submit"  name="valider"  value="S'authentifier"  />
-        <a  href="inscription.php">Créer votre Compte</a>
-    </form>
+            <div class="btn">
+                <input type="submit" name="valider" value="valider">
+            </div>
+        </form>
 </div>
 
 <?php include '../composant/footer.php'; ?>

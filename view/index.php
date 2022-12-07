@@ -14,7 +14,7 @@
 
 <body>
     <?php
-        include './composant/header.php';
+        include '../composant/header.php';
     ?>
 
     <section id="bienvenue">
@@ -44,7 +44,7 @@
 
     
     <?php
-        include 'composant/footer.php';
+        include '../composant/footer.php';
     ?>
 
 </body>

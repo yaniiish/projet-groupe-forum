@@ -1,9 +1,7 @@
 <?php
-
 session_start();
-
-include('index.php');
-
-session_destroy();
+session_unset ();
+session_destroy(); 
+header("Location:../view/index.php");
 
 ?>
