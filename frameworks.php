@@ -16,8 +16,8 @@ include('composant/header.php');
 ?>
 
 <div class="new">
-        <p>Nouveau sujet</p>
-</div> 
+    <p><a href="create.php">Nouveau sujet</a></p>
+</div>  
 
 <?php
 include('composant/footer.php');
