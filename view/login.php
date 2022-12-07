@@ -35,6 +35,8 @@
             if($userexist && password_verify($password, $userexist->mdp)) {
                 $userinfo=$requser->fetch();
                 $_SESSION['id']=$userinfo['pseudo'];
+                session_start();
+                $_SESSION['pseudo'] = $_POST['pseudo'];
                 header("location:index.php");
             } else{
                 echo "<p style='color:red'>Mauvais login ou mot de passe!</p>";

@@ -45,7 +45,6 @@ include("../composant/header.php");
 </html>
 
 <?php
-session_start();
 require_once("../bdd/connexion_bdd.php");
 
 
