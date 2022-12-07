@@ -13,9 +13,7 @@
 
 <div class="bandeau">
     <div id="logo">
-        <a href="index.php">
-            <img src="./assets/images/logo_forum.png" alt="logo">
-        </a>
+        <img src="../assets/images/logo_forum.png" alt="logo">
     </div>
     <div class="nom_forum">
         <p>LE FORUM DES DEV'</p>
