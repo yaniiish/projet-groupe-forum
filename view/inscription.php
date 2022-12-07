@@ -1,36 +1,46 @@
+<?php
+
+include("../composant/header.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/formulaire.css">
     <title>Inscription</title>
 </head>
 <body>
-    <form method="POST" action="inscription.php">
-        <div>
-            <span class="pseudo">Pseudo</span>
-            <input type="text" placeholder="Votre pseudo" name="pseudo">
-        </div>
-        <div>
-            <span class="mail">Adresse e-mail</span>
-            <input type="email" placeholder="Votre adresse e-mail" name="mail">
-        </div>
-        <div>
-            <span class="password">Mot de passe</span>
-            <input type="password" placeholder="Votre mot de passe" name="password">
-        </div>
-        <div>
-            <span class="confirm_password">Confirmation mot de passe</span>
-            <input type="password" placeholder="Confirmez votre mot de passe" name="confirm_password">
-        </div>
-        <div>
-            <input type="checkbox" name="check_inscription">Je suis d'accord avec les conditions générales d'utilisation et politique de confidentialité.
-        </div>
-        <div>
-            <input type="submit" name="submit" value="Créer mon compte">
-        </div>
-    </form>
+
+<div class="formulaire">
+    <h1>S'inscrire</h1>
+        <form method="POST" action="inscription.php">
+            <div>
+                <input type="text"  class="input-text" placeholder="Votre pseudo" name="pseudo">
+            </div>
+            <div>
+                <input type="email" class="input-text" placeholder="Votre adresse e-mail" name="mail">
+            </div>
+            <div>
+                <input type="password" class="input-text" placeholder="Votre mot de passe" name="password">
+            </div>
+            <div>
+                <input type="password" class="input-text" placeholder="Confirmez votre mot de passe" name="confirm_password">
+            </div>
+            <div class="check">
+                    <input class="checkbox" type="checkbox" name="check_inscription">
+                    <p>Je suis d'accord avec les conditions générales d'utilisation et politique de confidentialité.</p>
+              
+            </div>
+            <div class="btn">
+                <input type="submit" name="submit" value="Créer mon compte">
+            </div>
+        </form>
+</div>
+   
 </body>
 </html>
 
@@ -49,4 +59,10 @@ if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) &
     ]);     
     header('Location:login.php');
 } 
+?>
+
+<?php
+
+include("../composant/footer.php");
+
 ?>

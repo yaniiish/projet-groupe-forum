@@ -13,18 +13,16 @@
 
 <div class="bandeau">
     <div id="logo">
-        <a href="index.php">
-            <img src="./assets/images/logo_forum.png" alt="logo">
-        </a>
+        <img src="../assets/images/logo_forum.png" alt="logo">
     </div>
     <div class="nom_forum">
         <p>LE FORUM DES DEV'</p>
     </div>
 
     <div class="boutons">
-        <a href="./view/inscription.php" class="btn">Inscription</a>
-        <a href="./view/login.php" class="btn">Connexion</a>
-        <a href="./utilisateur/deconnexion.php" class="btn">Déconnexion</a>
+        <a href="../view/inscription.php" class="btn">Inscription</a>
+        <a href="../view/login.php" class="btn">Connexion</a>
+        <a href="../utilisateur/deconnexion.php" class="btn">Déconnexion</a>
     </div>
 </div>
 
