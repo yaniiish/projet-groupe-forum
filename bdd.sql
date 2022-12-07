@@ -69,18 +69,6 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `utilisateurs`
---
-
-INSERT INTO `utilisateurs` (`id`, `pseudo`, `mail`, `mdp`) VALUES
-(18, 'sam1', 'ljl@kllk.net', '$2y$10$5lQY18L9IPPHWlWHVAp0/e12HptAuGcSsUqIAY7bW2h/bZip542/e'),
-(17, 'baya', 'lklk@klj.net', '$2y$10$CV1Xqf2XeLfxfKLUBbuQgOMk2g.Ci3q5sjDZuDL/3Yrc98Z/2imiu'),
-(16, 'sam', 'sam@l.net', '$2y$10$gkTNR1ZBqrQWqiSiSQgs/.miY1/u/Ix3Dw60dwpGvx7T/piCcx0hi'),
-(15, 'yanis3', 'mlum@lm.n', '$2y$10$Jljwp7LYlkTLKNY/fTVBzeKCYrc9HMfdOlM9clP7PE1xl7LEqG/vW'),
-(14, 'yanis3', 'mlum@lm.n', '$2y$10$x1Hos6KeQ.GanH1YG7EPL.ohR01PHSBAmX/CDbR2FDRpQbu/vMNZO'),
-(13, 'yanis3', 'mlum@lm.n', '$2y$10$PwxJWnOxng8FgaXPaWX2UuxI1QX5OU.JNJ0THS8uT3IwU5D2FLfOW');
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
