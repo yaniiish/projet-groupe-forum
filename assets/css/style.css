@@ -36,6 +36,10 @@ body{
     text-decoration: none;
 }
 
+.btn:link {
+    color: black;
+}
+
 a {
     text-decoration-line: none;
 }
@@ -56,6 +60,10 @@ li {
     color: white;
     border-radius: 5px;
     padding: 5px 3px;
+}
+
+li:hover, li:active, li:focus {
+    background-color: red;
 }
 
 /* cadre de bienvenue */
