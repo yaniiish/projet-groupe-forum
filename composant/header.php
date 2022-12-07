@@ -28,11 +28,11 @@
 
 <div class="sections">
     <ul>
-        <li>HTML/CSS</li>
-        <li>JAVASCRIPT</li>
-        <li>PHP</li>
-        <li>FRAMEWORKS</li>
-        <li>&#128269; RECHERCHE</li>
+        <li><a href="html_css.php" style="color: white">HTML/CSS</a></li>
+        <li><a href="javascript.php" style="color: white">JAVASCRIPT</a></li>
+        <li><a href="php.php" style="color: white">PHP</a></li>
+        <li><a href="frameworks.php" style="color: white">FRAMEWORKS</a></li>
+        <li style="border: none">&#128269;<input type="text" name="search" placeholder="RECHERCHE">&#160;<input type="submit" value="OK"></li>
     </ul>
 </div>
     
