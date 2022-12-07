@@ -25,7 +25,7 @@
 <?php
     require_once("../bdd/connexion_bdd.php");
     
-    if (isset($_POST['valider']) && isset($_POST['pseudo']) && isset($_POST['password'])) {
+    if (!empty($_POST['valider']) && !empty($_POST['pseudo']) && !empty($_POST['password'])) {
         $pseudo = $_POST["pseudo"];
         $password = $_POST["password"];
         $requser=$pdo->prepare("SELECT*FROM utilisateurs WHERE pseudo=?");
