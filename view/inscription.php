@@ -36,7 +36,7 @@
 
 <?php
 session_start();
-require_once("../connexion_bdd.php");
+require_once("../bdd/connexion_bdd.php");
 
 
 if(isset($_POST["submit"]) && isset($_POST["pseudo"]) && isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["confirm_password"]) && $_POST["password"] === $_POST["confirm_password"] && isset($_POST["check_inscription"]) ) {

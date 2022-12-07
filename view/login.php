@@ -1,25 +1,22 @@
 <?php
-    include("../connexion_bdd.php");
+    include("../bdd/connexion_bdd.php");
     
     if (isset($_POST['valider']) && isset($_POST['pseudo']) && isset($_POST['password'])) {
         $pseudo = $_POST["pseudo"];
         $password = $_POST["password"];
-
-        if (isset($pseudo) && isset($password)) {
-            $requser=$pdo->prepare("SELECT*FROM utilisateurs WHERE pseudo=?");
-            $requser->execute([$pseudo]);
-
-            $userexist=$requser->fetch(PDO::FETCH_OBJ);
+        $requser=$pdo->prepare("SELECT*FROM utilisateurs WHERE pseudo=?");
+        $requser->execute([$pseudo]);
+        $userexist=$requser->fetch(PDO::FETCH_OBJ);
 
             if($userexist && password_verify($password, $userexist->mdp)) {
                 $userinfo=$requser->fetch();
                 $_SESSION['id']=$userinfo['pseudo'];
-                header("location:../accueil.php");
+                header("location:accueil.php");
             } else{
                 echo "Mauvais login ou mot de passe!";
-            }  
-        }
+        }  
     }
+    
 ?>
 
 
@@ -36,7 +33,7 @@
 <body>
 
     <!-- <div id="accueil">
-        <?php include '../accueil.php'; ?>
+        <?php include 'accueil.php'; ?>
     </div>  -->
 
     <h1>Se connecter</h1>
