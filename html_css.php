@@ -11,15 +11,15 @@
 <body>
 
 <?php
-include('header.php');
+include('composant/header.php');
 ?>
 
 <div class="new">
-        <p><a href="create.php">Nouveau sujet</a></p>
+    <p><a href="create.php">Nouveau sujet</a></p>
 </div> 
 
 <?php
-include('footer.php');
+include('composant/footer.php');
 ?>
 
 </body>
