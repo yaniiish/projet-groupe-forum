@@ -36,6 +36,10 @@ body{
     text-decoration: none;
 }
 
+.deco {
+    margin: 0px;
+}
+
 .btn:link {
     color: black;
 }
@@ -63,7 +67,7 @@ li {
 }
 
 li:hover, li:active, li:focus {
-    background-color: red;
+    background-color:  rgb(62, 62, 151);
 }
 
 /* cadre de bienvenue */
@@ -122,4 +126,10 @@ footer{
 
 .new p{
     text-align: center;
+}
+
+.salutation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
