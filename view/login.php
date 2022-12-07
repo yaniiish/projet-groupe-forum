@@ -32,17 +32,20 @@
 </head>
 <body>
 
-    <!-- <div id="accueil">
-        <?php include 'accueil.php'; ?>
-    </div>  -->
+ 
+<?php include '../composant/header.php'; ?>
 
+<div class="formulaire">
     <h1>Se connecter</h1>
-<form  name="form"  method="post"  action="">
-<input  type="text"  name="pseudo"  placeholder="Votre Pseudo"  /><br  />
-<input  type="password"  name="password"  placeholder="Mot de passe"  /><br  />
-<input  type="submit"  name="valider"  value="S'authentifier"  />
-<a  href="inscription.php">Créer votre Compte</a>
-</form>
+    <form  name="form"  method="post"  action="">
+        <input  type="text"  name="pseudo"  placeholder="Votre Pseudo"  /><br  />
+        <input  type="password"  name="password"  placeholder="Mot de passe"  /><br  />
+        <input  type="submit"  name="valider"  value="S'authentifier"  />
+        <a  href="inscription.php">Créer votre Compte</a>
+    </form>
+</div>
+
+<?php include '../composant/footer.php'; ?>
 
 </body>
 </html>
