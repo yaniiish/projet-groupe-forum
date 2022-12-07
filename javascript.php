@@ -11,7 +11,7 @@
 <body>
 
 <?php
-include('header.php');
+include('composant/header.php');
 ?>
 
 <div class="new">
@@ -19,7 +19,7 @@ include('header.php');
 </div> 
 
 <?php
-include('footer.php');
+include('composant/footer.php');
 ?>
     
 </body>
