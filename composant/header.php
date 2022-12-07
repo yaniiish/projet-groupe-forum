@@ -20,9 +20,9 @@
     </div>
 
     <div class="boutons">
-        <a href="#" class="btn">Inscription</a>
+        <a href="" class="btn">Inscription</a>
         <a href="connexion.php" class="btn">Connexion</a>
-        <a href="destroy.php" class="btn">Déconnexion</a>
+        <a href="deco.php" class="btn">Déconnexion</a>
     </div>
 </div>
 
