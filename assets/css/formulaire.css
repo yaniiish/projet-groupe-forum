@@ -1,8 +1,10 @@
 * {
+
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 
 h1 {
     margin: 20px 0px;
@@ -11,11 +13,12 @@ h1 {
     }
 
 
+
 .formulaire {
     width: 600px;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,4 +79,16 @@ form {
 
 .btn input:hover {
     opacity: 80%;
+}
+
+#recup-id {
+    width: 350px;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.recup-id {
+    color: black;
+    font-size: small;
+    
 }

@@ -16,7 +16,7 @@
             <a  href="#">Informations légales</a>
         </div>
         <div id="copy">
-            <p>&copy; COPYRIGHT</p>
+            <p class="copy">&copy; COPYRIGHT</p>
             <p id="names"><i>Yanis Herda, Samantha Teixeira, Baya Sebia, Armelle Thimothé</i></p>
         </div>
     </footer>
