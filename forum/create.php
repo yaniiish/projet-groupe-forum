@@ -39,7 +39,7 @@
     </head>
     <body>
         
-    <form method="post" action="#footer" autocomplete="off">
+    <form method="post" action="" autocomplete="off">
         <div class="row gtr-uniform">
             <div class="col-12 col-12-xsmall">
             <input type="text" name="titre" id="sujet" placeholder="Titre du sujet" /></div>
