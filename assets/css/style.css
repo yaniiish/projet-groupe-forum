@@ -88,10 +88,10 @@ li:hover, li:active, li:focus {
 
 footer{
     background-color: rgb(156, 152, 152);
-    padding: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
     color: white;
     font-size: x-large;
+    height: 150px;
 }
 
 #footer{
@@ -110,6 +110,9 @@ footer{
     text-align: center;
 }
 
+.copy{ 
+    margin: 25px;
+}
 #names {
     font-size: 15px;
 }
