@@ -1,0 +1,39 @@
+body {
+    background-color: gray
+}
+
+.main {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5%;
+    font-size: 17px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+a {
+    color: rgb(62, 62, 151);
+}
+
+ul,.liste{
+    background-color: white;
+    display: block;
+}
+
+ul,.exp {
+    background-color: white;
+    display: block;
+}
+
+#detail{
+    list-style-type: disc;
+    background-color: white;
+    color: black;
+}
+
+
+

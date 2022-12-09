@@ -1,0 +1,6 @@
+#map img {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 5% 0% 5% 10%;
+}
