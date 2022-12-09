@@ -7,9 +7,20 @@
     <title>Se connecter</title>
     <link rel="stylesheet" href="../assets/css/formulaire.css">
     <link rel="stylesheet" href="../assets/css/generique.css">
+    <link rel="stylesheet" href="../assets/css/modal.css">
 </head>
 
 <body>
+
+<!-- fenetre modale -->
+<div class="modal" id="modal1">
+    <div style="width:100%;text-align:right"><span class="closeBtn" onclick="closeModal()">X</span></div>
+    <h2>-- create new Todo --</h2>
+    <p id="content" class="pseudoTxtarea" contenteditable>&nbsp;</p>
+    <div style="text-align:center;"><span class="pseudoBtn" onclick="envoyerMail()">Créer</span></div>
+</div>
+<!-- -->
+
 <div class="wrap">
 
     <div class="header">
@@ -27,7 +38,7 @@
                     <input type="password" class="input-text" placeholder="Votre mot de passe" name="password">
                 </div>
                 <div id="recup-id">
-                    <a class="recup-id" href="" onclick="recup_identifiant()">Récupérer mes identifiants</a>
+                    <a id="recup-id1" href="" >Récupérer mes identifiants</a>
                 </div>
 
                 <?php
