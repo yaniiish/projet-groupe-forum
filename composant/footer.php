@@ -12,8 +12,8 @@
 <body>
     <footer>
         <div id="footer">
-            <a href="#">Plan du site</a>
-            <a  href="#">Informations légales</a>
+            <a href="../view/plan.php">Plan du site</a>
+            <a  href="../view/mentions.php">Informations légales</a>
         </div>
         <div id="copy">
             <p>&copy; COPYRIGHT</p>
