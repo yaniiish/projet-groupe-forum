@@ -19,10 +19,18 @@
         <p>LE FORUM DES DEV'</p>
     </div>
 
+
+
     <div class="boutons">
+        <?php if (isset($_SESSION['pseudo'])):?>
+            <div class="salutation">
+        <?php echo '<p style="color: white">Bonjour ' . $_SESSION['pseudo'] . ' !</p>';?>
+        <a href="../utilisateur/deconnexion.php" class="btn deco">Déconnexion</a>
+        </div>
+        <?php else :?>
         <a href="../view/inscription.php" class="btn">Inscription</a>
         <a href="../view/login.php" class="btn">Connexion</a>
-        <a href="../utilisateur/deconnexion.php" class="btn">Déconnexion</a>
+        <?php endif;?>
     </div>
 </div>
 
