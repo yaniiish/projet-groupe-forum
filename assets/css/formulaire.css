@@ -17,8 +17,8 @@ h1 {
 .formulaire {
     width: 600px;
     margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,3 +81,14 @@ form {
     opacity: 80%;
 }
 
+#recup-id {
+    width: 350px;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.recup-id {
+    color: black;
+    font-size: small;
+    
+}

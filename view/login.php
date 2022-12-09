@@ -26,6 +26,9 @@
                 <div>
                     <input type="password" class="input-text" placeholder="Votre mot de passe" name="password">
                 </div>
+                <div id="recup-id">
+                    <a class="recup-id" href="" onclick="recup_identifiant()">Récupérer mes identifiants</a>
+                </div>
 
                 <?php
                     require_once("../bdd/connexion_bdd.php");
@@ -62,6 +65,6 @@
     </div>
 
 </div>
-
+<script src="../assets/js/login.js"></script>
 </body>
 </html>
