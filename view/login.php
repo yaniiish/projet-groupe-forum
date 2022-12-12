@@ -7,9 +7,11 @@
     <title>Se connecter</title>
     <link rel="stylesheet" href="../assets/css/formulaire.css">
     <link rel="stylesheet" href="../assets/css/generique.css">
+    <link rel="stylesheet" href="../assets/css/modal.css">
 </head>
 
 <body>
+
 <div class="wrap">
 
     <div class="header">
@@ -26,9 +28,23 @@
                 <div>
                     <input type="password" class="input-text" placeholder="Votre mot de passe" name="password">
                 </div>
-                <div id="recup-id">
-                    <a class="recup-id" href="" onclick="recup_identifiant()">Récupérer mes identifiants</a>
+                <div id="recup-id" onclick="openModal()">
+                    <a class="recup-id">Récupérer mes identifiants</a>
                 </div>
+
+                <!-- fenêtre modale -->
+                <div class="modal" id="modal1">
+                    <div style="width:100%;text-align:right"><span class="closeBtn" onclick="closeModal()">X</span></div>
+                    <div>
+                        <form action="" method="post">
+                            <h2>Récupération des identifiants de connexion</h2>
+                            <div>
+                                <input type="email" class="input-text" placeholder="Votre adresse e-mail" name="mail">
+                            </div>
+                        </form>
+                    </div>
+                    <div style="text-align:center;"><span class="pseudoBtn" onclick="createTodo()">Créer</span></div>
+                </div>  
 
                 <?php
                     require_once("../bdd/connexion_bdd.php");
@@ -65,6 +81,6 @@
     </div>
 
 </div>
-<script src="../assets/js/login.js"></script>
+<script src="../assets/js/modal.js"></script>
 </body>
 </html>
